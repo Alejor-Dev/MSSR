@@ -8929,6 +8929,123 @@
           "git-worktree-reconciliation"
         ]
       }
+    },
+    {
+      "name": "miareader-questionnaire-positive-offline-form",
+      "task": "Crear un cuestionario .miaform.json y guía Markdown offline para MIAReader",
+      "caller": "chatgpt-web",
+      "stage": "implement",
+      "sources": [
+        "codex-local"
+      ],
+      "intent": {
+        "summary": "Crear formulario declarativo MIAReader con documentación de proyecto",
+        "domains": [
+          "artifacts",
+          "filesystem"
+        ],
+        "actions": [
+          "create",
+          "document"
+        ],
+        "artifacts": [
+          "document",
+          "project"
+        ],
+        "needs": [
+          "component-reuse"
+        ],
+        "signals": [
+          "reusable-pattern"
+        ],
+        "risk": "write",
+        "ambiguity": "low"
+      },
+      "expect": {
+        "classificationMode": "structured-semantic",
+        "activeIncludes": [
+          "miareader-questionnaire"
+        ]
+      }
+    },
+    {
+      "name": "miareader-questionnaire-negative-general-docs",
+      "task": "Escribir documentación de API y unit tests sin usar MIAReader",
+      "caller": "chatgpt-web",
+      "stage": "implement",
+      "sources": [
+        "codex-local"
+      ],
+      "intent": {
+        "summary": "Documentar API sin lector tablet",
+        "domains": [
+          "artifacts",
+          "filesystem"
+        ],
+        "actions": [
+          "create",
+          "document"
+        ],
+        "artifacts": [
+          "document",
+          "project"
+        ],
+        "needs": [
+          "unit-tests"
+        ],
+        "signals": [
+          "nominal"
+        ],
+        "risk": "write",
+        "ambiguity": "low"
+      },
+      "expect": {
+        "classificationMode": "structured-semantic",
+        "activeExcludes": [
+          "miareader-questionnaire"
+        ]
+      }
+    },
+    {
+      "name": "miareader-questionnaire-continuation",
+      "task": "Continuar la guía MIAReader y revisar las preguntas y documentos",
+      "caller": "chatgpt-web",
+      "stage": "implement",
+      "sources": [
+        "codex-local"
+      ],
+      "intent": {
+        "summary": "Continuar un formulario y paquete de documentos MIAReader",
+        "domains": [
+          "artifacts",
+          "filesystem"
+        ],
+        "actions": [
+          "create",
+          "document"
+        ],
+        "artifacts": [
+          "document",
+          "project"
+        ],
+        "needs": [
+          "component-reuse"
+        ],
+        "signals": [
+          "reusable-pattern"
+        ],
+        "risk": "write",
+        "ambiguity": "low"
+      },
+      "expect": {
+        "classificationMode": "structured-semantic",
+        "activeIncludes": [
+          "miareader-questionnaire"
+        ]
+      },
+      "completedPhases": [
+        "discovery"
+      ]
     }
   ]
 }

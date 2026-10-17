@@ -2822,6 +2822,47 @@
       "requireArtifactMatch": true,
       "priority": 72,
       "activation": "on-demand"
+    },
+    "miareader-questionnaire": {
+      "phase": "implementation",
+      "coversPhases": [
+        "verification",
+        "persistence"
+      ],
+      "domains": [
+        "artifacts",
+        "coding",
+        "filesystem"
+      ],
+      "actions": [
+        "design",
+        "create",
+        "document",
+        "edit",
+        "review"
+      ],
+      "artifacts": [
+        "document",
+        "project"
+      ],
+      "needs": [
+        "component-reuse"
+      ],
+      "requires": [],
+      "complements": [
+        "shared-skill-governance"
+      ],
+      "excludes": [],
+      "negativeIntents": [
+        "ordinary code documentation without MIAReader reader or questionnaire intent",
+        "production website/inventory implementation",
+        "image only"
+      ],
+      "priority": 89,
+      "activation": "on-demand",
+      "requireNeedMatch": true,
+      "requireActionMatch": true,
+      "requireArtifactMatch": true
     }
   },
   "workflows": [
