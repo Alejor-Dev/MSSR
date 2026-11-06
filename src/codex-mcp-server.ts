@@ -15,7 +15,7 @@ import { registerMssrSemanticCurationTools } from "./semantic-curation-contract.
 
 function response(value: unknown) {
   return {
-    content: [{ type: "text" as const, text: JSON.stringify(value, null, 2) }],
+    content: [{ type: "text" as const, text: JSON.stringify(value) }],
   };
 }
 

@@ -1116,7 +1116,7 @@ function callerExecutionGuidance(caller: SkillCaller): string[] {
   if (caller === "codex-local") {
     return [
       "Prefer direct local filesystem and terminal tools when they are authoritative and sufficient.",
-      "Use MauroPrime Bridge when it adds shared routing, snapshots, recovery, verified Roblox place saves, persistent terminals, or cross-client coordination.",
+      "Respect the user's and project's host-specific routing preferences; use a Bridge only when permitted and needed for a capability without an adequate direct route.",
     ];
   }
   if (caller === "chatgpt-web") {

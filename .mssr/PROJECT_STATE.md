@@ -1,8 +1,10 @@
 # MSSR project state
 
+**Latest source release and runtime status:** MSSR 0.2.136 is the current source release. It applies host-specific Codex guidance, registers the game-ability storyboard route, and serializes Codex-owned MCP responses compactly. `mauroprime-mssr-0.2.136.tgz` is 1,205,823 bytes, SHA-256 `c292353e6cab33cf98c1c7053662bdd3939f42f7746792b4911ce2a04f821491`, npm integrity `sha512-j/ePoFpRUIAkCCuS7J7fSIUZAgvgGfpK+PIJhTxrlPt0yir7kn0ryAKDJnzSPkptss0jr9WrSv8Qga0wWAPD9g==`; receipt `.mssr/runtime/releases/0.2.136.json`. Bridge adoption is still pending; its latest recorded runtime uses MSSR 0.2.134. The release gates passed locally, but adoption must be verified separately.
+
 **Latest adopted source and Bridge runtime:** MSSR 0.2.134 extends provider-input privacy preflight to semantic curation, Librarian selection, and semantic relation review after call-graph review found a third direct Jev path. `npm run verify` and `npm run release:gate` passed at 2026-10-14T00:36:41Z; canonical package `mauroprime-mssr-0.2.134.tgz` is 1,196,357 bytes, SHA-256 `df40d4caaff607327268eabf6ee95b828f0c73c5c57c3222683be31c2e77bdce`, npm integrity `sha512-AxOG3mZ99PCkWInv+FfAZjVysbg/g6uZ6bT+m1PYmGOCbFlxXq75QlFRgdAwBGOuzNm7Lk6dY2bW6MlJMXB/UQ==`; receipt `.mssr/runtime/releases/0.2.134.json`. The narrower 0.2.133 package passed its gate but was superseded. Controlled adoption was acknowledged at 2026-10-14T02:07:52Z. Bridge 0.6.180 is live/ready; its active code-root lockfile pins the exact 0.2.134 tarball and integrity, and the runtime reports 189 tools with no restart pending.
 
-**Unadopted source candidate:** MSSR 0.2.135 updates only the offline Librarian composition experiment plan/reporting and its regression coverage. The full `npm run release:gate` passed at 2026-10-14T08:44:43.884Z, including `npm run verify` (exit 0); artifact `mauroprime-mssr-0.2.135.tgz` is 1,204,064 bytes, SHA-256 `941c943e4f58743f3036f564329e888440d5fc155d3b752cdc5f4cfbf3e9d1e5`, with receipt `.mssr/runtime/releases/0.2.135.json`. It is pushed on `codex/mssr-librarian-query-variants-0.2.112` but is not installed in Bridge; runtime remains on MSSR 0.2.134. Controlled adoption, restart, and live verification remain pending.
+**Previous unadopted source release:** MSSR 0.2.135 updated the offline Librarian composition experiment plan/reporting and its regression coverage. Its package and verification record remain in `.mssr/runtime/releases/0.2.135.json`; it was superseded by 0.2.136 before Bridge adoption.
 
 ## Current release
 MSSR 0.2.134 is active in Bridge 0.6.180. It retains opt-in `queryVariantRanking="round-robin"` for explicit host-supplied query variants; `primary-first` remains the default, and adds provider-input privacy preflight to all three Jev call paths. Artifact `mauroprime-mssr-0.2.134.tgz` is 1,196,357 bytes, SHA-256 `df40d4caaff607327268eabf6ee95b828f0c73c5c57c3222683be31c2e77bdce`, npm integrity `sha512-AxOG3mZ99PCkWInv+FfAZjVysbg/g6uZ6bT+m1PYmGOCbFlxXq75QlFRgdAwBGOuzNm7Lk6dY2bW6MlJMXB/UQ==`. The active code-root package lock pins this exact vendored artifact. The package is Bridge-vendored and Git-versioned, not published to public npm. Source branch `codex/mssr-librarian-query-variants-0.2.112` remains separate from `origin/main`; active Bridge code is `D:\Dev\bridge-mcp-mssr-0.2.112-query-variants`, runtime/data remain at `D:\Dev\bridge-mcp`.
@@ -83,7 +85,7 @@ Core package state: five first-party MSSR operational skill roots. Semantic evid
 <!-- mssr-state:roadmap.r2=completed -->
 <!-- mssr-state:roadmap.r3=completed -->
 <!-- mssr-state:roadmap.r4=pending -->
-<!-- mssr-version:mssr.source=0.2.135 -->
+<!-- mssr-version:mssr.source=0.2.136 -->
 <!-- mssr-version:bridge.live=0.6.180 -->
 
 <!-- mssr-owner:semantic.consistency=mssr -->

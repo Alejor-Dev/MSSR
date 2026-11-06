@@ -2224,6 +2224,27 @@
       "priority": 91,
       "activation": "on-demand"
     },
+    "game-ability-storyboards": {
+      "phase": "implementation",
+      "coversPhases": ["discovery", "verification", "persistence"],
+      "domains": ["artifacts"],
+      "actions": ["design", "create", "edit", "review", "verify", "save", "document"],
+      "artifacts": ["game", "animation", "asset", "document"],
+      "needs": ["visual-qa"],
+      "requires": [],
+      "complements": ["visual-reference-authoring", "visual-reference-integrity", "visual-evidence-audit"],
+      "excludes": [],
+      "negativeIntents": [
+        "text-only ability balance or combat-system design without visual storyboard output",
+        "runtime-only capture or review of an already implemented animation",
+        "promotional video or marketing artwork"
+      ],
+      "requireNeedMatch": true,
+      "requireActionMatch": true,
+      "requireArtifactMatch": true,
+      "priority": 94,
+      "activation": "on-demand"
+    },
     "game-animation-retarget": {
       "phase": "implementation",
       "coversPhases": ["discovery", "verification", "persistence"],

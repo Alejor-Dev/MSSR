@@ -14,10 +14,15 @@ const cases = [
   { name:'maintenance-review', actions:['review','maintain'], needs:['history-recovery'], risk:'write', signals:['repeated-friction'], present:['maintenance'], absent:['persistence'] },
 ];
 const results=[];
+const webRoute=await planSkillRoute({task:'web-host-guidance',skills,caller:'chatgpt-web',stage:'start',maxSkills:3,
+  intent:{domains:['coding'],actions:['discover'],artifacts:['mcp'],needs:[],risk:'read-only',signals:['nominal'],ambiguity:'low'}});
+assert.ok(webRoute.executionGuidance.some(text => text.startsWith('Use MauroPrime Bridge')));
 for (const c of cases) {
   const route=await planSkillRoute({task:c.name, skills, caller:'codex-local',stage:'close',maxSkills:3,
     intent:{domains:['git','coding'],actions:c.actions,artifacts:['repository'],needs:c.needs,risk:c.risk,signals:c.signals,ambiguity:'low'}});
   const phases=route.coverage.requiredPhases;
+  assert.ok(route.executionGuidance.some(text => text.includes('host-specific routing preferences')));
+  assert.ok(!route.executionGuidance.some(text => text.startsWith('Use MauroPrime Bridge')));
   const eligible=resolveSkillLoadSelection(route,'host-gated',[]).eligibleLoadOrder;
   results.push({name:c.name,phases,eligible,routeChars:JSON.stringify(route).length});
   if(process.argv.includes('--measure')) continue;

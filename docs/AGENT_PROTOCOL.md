@@ -1,5 +1,10 @@
 # Agent protocol
 
+Host execution guidance is advisory and must respect explicit user and project
+preferences. Codex-local should prefer authoritative direct tools; do not
+recommend a Bridge against a declared host policy. ChatGPT Web guidance remains
+separate and does not grant access or permission.
+
 The MSSR protocol is a compact, observable classification—not hidden reasoning.
 It makes routing reusable across skills and tools without forcing every request
 through a proxy.

@@ -9046,6 +9046,126 @@
       "completedPhases": [
         "discovery"
       ]
+    },
+    {
+      "name": "game-ability-storyboards-positive-combo-sheet",
+      "task": "Creá una lámina de referencia para el combo de Agua de Elemental Frontier: estado de órbita, tres básicos LMB, movimiento corporal claro y flujo de volumen desde el anillo al impacto. Usa la captura W13 real y marca lo propuesto.",
+      "stage": "implement",
+      "sources": [
+        "codex-local"
+      ],
+      "intent": {
+        "summary": "Crear storyboard visual para combo de juego apoyado en evidencia real y contratos",
+        "domains": [
+          "artifacts"
+        ],
+        "actions": [
+          "design",
+          "create",
+          "document"
+        ],
+        "artifacts": [
+          "game",
+          "animation",
+          "asset"
+        ],
+        "needs": [
+          "visual-qa"
+        ],
+        "signals": [
+          "uncertainty"
+        ],
+        "risk": "write",
+        "ambiguity": "medium"
+      },
+      "expect": {
+        "classificationMode": "structured-semantic",
+        "activeIncludes": [
+          "game-ability-storyboards"
+        ]
+      }
+    },
+    {
+      "name": "game-ability-storyboards-continuation-water-combo",
+      "task": "Dale, guardá la nueva versión y deja claro qué falta para implementarla.",
+      "context": "El proyecto Elemental Frontier tiene una hoja de combo de Agua propuesta. La forma está anclada a una captura W13 de anillo bajo continuo; no usar esferas separadas. RMB/LMB no está aprobado y la hoja no demuestra runtime. Falta guardar el artefacto, la crítica y contratos pendientes.",
+      "stage": "resume",
+      "sources": [
+        "codex-local"
+      ],
+      "intent": {
+        "summary": "Continuar storyboard visual de habilidad de juego y persistir la referencia revisada",
+        "domains": [
+          "artifacts",
+          "filesystem"
+        ],
+        "actions": [
+          "create",
+          "save",
+          "review",
+          "document"
+        ],
+        "artifacts": [
+          "game",
+          "animation",
+          "asset",
+          "document"
+        ],
+        "needs": [
+          "visual-qa"
+        ],
+        "signals": [
+          "uncertainty",
+          "reusable-pattern"
+        ],
+        "risk": "write",
+        "ambiguity": "medium"
+      },
+      "expect": {
+        "classificationMode": "structured-semantic",
+        "contextUsed": true,
+        "activeIncludes": [
+          "game-ability-storyboards"
+        ]
+      }
+    },
+    {
+      "name": "game-ability-storyboards-negative-text-only-design",
+      "task": "Analizá si el combo LMB y la técnica RMB de Agua están balanceados; solo quiero discusión de mecánicas, sin generar láminas ni imágenes.",
+      "stage": "start",
+      "sources": [
+        "codex-local"
+      ],
+      "intent": {
+        "summary": "Analizar balance de habilidades sin crear referencias visuales",
+        "domains": [
+          "artifacts"
+        ],
+        "actions": [
+          "design",
+          "analyze"
+        ],
+        "artifacts": [
+          "game"
+        ],
+        "needs": [
+          "official-docs"
+        ],
+        "signals": [
+          "nominal"
+        ],
+        "risk": "read-only",
+        "ambiguity": "low"
+      },
+      "expect": {
+        "classificationMode": "structured-semantic",
+        "activeExcludes": [
+          "game-ability-storyboards"
+        ],
+        "deferredExcludes": [
+          "game-ability-storyboards"
+        ]
+      }
     }
   ]
 }

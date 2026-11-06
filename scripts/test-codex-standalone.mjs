@@ -94,7 +94,10 @@ try {
     },
     stage: "start",
   };
-  const route = json(await client.callTool({ name: "skill_route_plan", arguments: input }));
+  const routeResponse = await client.callTool({ name: "skill_route_plan", arguments: input });
+  const route = json(routeResponse);
+  const routeText = routeResponse.content.find((entry) => entry.type === "text").text;
+  assert.equal(routeText, JSON.stringify(route), "Codex route JSON should be compact and lossless");
   assert.ok(route.traceId);
   assert.equal(route.caller, "codex-local");
 
