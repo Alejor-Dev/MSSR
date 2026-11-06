@@ -11,3 +11,19 @@ Expanded v3 cohort: 20 answerable and 5 unanswerable queries over five current M
 Contrastive v1 reused those same five documents and is diagnostic, not a fresh holdout. Live Jev/search completed 14/14 calls; all 10 selected handles exact-fetched with matching IDs, revisions and fingerprints. Blind grading found 7 fully supported selections, 1 partial, 2 unsupported and 4 abstentions. A post-hoc source audit corrected answerability for D04/D10/D12/D14 (explicit negative answers); D06 remains unresolved and is excluded from the primary score. Of the other 11 answerable queries, 7 were fully supported, 1 partial and 3 falsely abstained; one of two definite unanswerable queries was correctly abstained. Confidence remains uncalibrated. D01 blind-input omission and label flaws are recorded without changing sealed labels. Frozen report: `D:\MSSR-benchmark-artifacts\jev-shep-calibration-20261009-v1\librarian-contrastive-authority-abstention-20261010-v1\REPORT.md` and `manifest.json`.
 
 **Latest Jev/Librarian diagnostic (2026-10-10):** Repeated ten exposed contrastive queries twice; choices/abstentions matched 10/10 per round, while raw Choice scores varied (mean range 0.040). Direct D04 wording raised deterministic search rank for the exact `minEvidence` section from 25 to 3 and Jev exact-fetched its analysis-only rule; neutral variants could select partial evidence despite higher scores. D05's English variant recovered the exact section at rank 2/20; it selected from the Spanish query (Choice 0.58 / sufficiency 0.67, uncalibrated). D12 still warns that simplified queries may miss compound facets. Same-corpus evidence; no calibration or threshold change. Reports and receipts are in `D:\MSSR-benchmark-artifacts\jev-shep-calibration-20261009-v1\librarian-contrastive-authority-abstention-20261010-v1\`.
+
+## Librarian composition labels and missing evidence
+
+An expected-present fact with no selected span is a retrieval/selection miss;
+an expected-absent facet has no positive line span and must not be scored as
+zero line recall. Keep those labels explicit in offline plans, report absence
+coverage as `null`, and treat a selection/abstention match only as agreement
+with a caller-authored expectation. A Jev abstention does not prove that a
+fact is absent from the corpus. Expected-absent facets remain incomplete for
+exact evidence and continue to block synthesis. For present facets, a verified
+fetch is not complete target evidence unless it covers every caller-labeled
+expected line; report fetch count separately from full-span coverage and keep
+partial spans blocking. Full span coverage still does not establish semantic
+support or authorize synthesis. Synthetic harness checks can exercise partial
+support, omission, citation scope and unsupported cross-facet joins, but do not
+create owner-gold or calibration evidence.

@@ -161,7 +161,7 @@
       "signals": [],
       "required": false,
       "priority": 88,
-      "maxChars": 3000
+      "maxChars": 4500
     },
     {
       "id": "mssr-architecture-impact-history",
@@ -407,7 +407,7 @@
       "signals": [],
       "required": false,
       "priority": 80,
-      "maxChars": 4000
+      "maxChars": 4500
     },
     {
       "id": "mssr-semantic-evidence-plane",
@@ -577,7 +577,7 @@
       ],
       "required": false,
       "priority": 99,
-      "maxChars": 1800
+      "maxChars": 2100
     },
     {
       "id": "mssr-jev-confidence-run-history",
@@ -1009,7 +1009,7 @@
       ],
       "required": false,
       "priority": 90,
-      "maxChars": 3200
+      "maxChars": 6000
     },
     {
       "id": "mssr-semantic-consistency-decision",
@@ -1297,8 +1297,8 @@
     },
     {
       "id": "mssr-jev-librarian-integration-handoff",
-      "kind": "state",
-      "description": "Current Librarian integration status, branch preservation, benchmark boundaries, and next host gates.",
+      "kind": "memory",
+      "description": "Historical Jev/Librarian smoke, evaluation, and integration records through 2026-10-14; PROJECT_STATE.md is the current authority.",
       "source": {
         "path": ".mssr/knowledge/operations/jev-librarian-integration-handoff.md"
       },
@@ -1313,6 +1313,8 @@
         "filesystem"
       ],
       "actions": [
+        "analyze",
+        "review",
         "recover"
       ],
       "artifacts": [
@@ -1323,10 +1325,10 @@
         "history-recovery"
       ],
       "signals": [
-        "recovery-needed"
+        "uncertainty"
       ],
       "required": false,
-      "priority": 96,
+      "priority": 72,
       "maxChars": 5000
     },
     {
@@ -1526,7 +1528,7 @@
       "signals": [],
       "required": false,
       "priority": 100,
-      "maxChars": 6500
+      "maxChars": 7000
     },
     {
       "id": "mssr-jev-crossrepo-bilingual-range-retrieval-20261010",
@@ -1556,7 +1558,7 @@
       "signals": [],
       "required": false,
       "priority": 100,
-      "maxChars": 5000
+      "maxChars": 5500
     },
     {
       "id": "mssr-jev-relation-control-cohorts-20261010",

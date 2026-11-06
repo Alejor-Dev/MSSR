@@ -17,3 +17,15 @@ Archived development evidence from 2026-10-10. Labels are source-derived or AI-r
 **Live Bridge query-variant follow-up (2026-10-10):** Bridge 0.6.166 accepted `queryVariants` (7/7 ranges matched the English variant); Jev abstained on the broad question (Choice/Noul 0.33/0.36), then selected the documented retrieval result with focused wording (0.73/0.90), and exact fetch passed. Direct MSSR MCP still rejects the field. Same-corpus diagnostic only; scores are uncalibrated; full evidence and hashes: `D:\MSSR-benchmark-artifacts\jev-shep-calibration-20261010-v1\librarian-variant-recall-focused-diagnostic-20261010-v1\`.
 
 **Cross-suite provenance audit (2026-10-10):** Cohorts overlap and use non-owner labels, so do not pool them into a reliability score; full counts, overlaps, corrections, and verified hashes are in `D:\MSSR-benchmark-artifacts\jev-shep-calibration-20261009-v1\cohort-provenance-audit-20261010-v1\REPORT.md`.
+
+## Exact-input connector parity
+
+When comparing direct MSSR and a host adapter, provide byte-identical source
+text and compare owner, revision, range, offsets, fingerprint, and citation
+fields through exact fetch and evidence assembly. Terminal/output framing can
+append a newline and create a different derived revision despite identical
+underlying files. A matching single case supports plumbing parity only; it is
+not semantic equivalence, answer-quality evidence, or score calibration.
+Generic Bridge traces cannot prove the direct connector build or retain Jev
+inputs/results needed for replay. Paired evaluations need a separate
+hash-bound receipt for exact inputs, tool/runtime identities, and outputs.

@@ -1,4 +1,6 @@
-# Jev Librarian integration and Git handoff
+# Historical Jev Librarian integration and Git handoff
+
+> Historical record through 2026-10-14. Branch, release, and runtime statements below describe dated snapshots; current status is in PROJECT_STATE.md.
 
 ## Connected Librarian smoke — 2026-10-11
 
@@ -185,7 +187,7 @@ The 2026-10-08 production state is Bridge 0.6.161 with MSSR 0.2.110, recorded in
 
 The user's current instruction explicitly authorizes live Jev calls for this MSSR work; the historical `START_JEV` token is not required for these tests. Credentials are retrieved from Windows Credential Manager under `TypeSafe:MSSR:JevLab` and are not recorded in receipts. This authorization covers bounded evaluation calls, not applying unverified judgments to canonical sources.
 
-## Current next gates
+## Historical next gates — 2026-10-11
 
 The current release, live Bridge identity, recent diagnostic and exploratory
 limits belong to `.mssr/PROJECT_STATE.md` and the linked run records. Continue

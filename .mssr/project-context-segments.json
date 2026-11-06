@@ -396,13 +396,13 @@
           "sections": [
             "## Evaluation records"
           ],
-      "terms": [
-        "Elemental Frontier",
-        "bilingual",
-        "retrieval",
-        "granularity",
-        "queryVariants",
-        "Spanish query",
+          "terms": [
+            "Elemental Frontier",
+            "bilingual",
+            "retrieval",
+            "granularity",
+            "queryVariants",
+            "Spanish query",
             "English variant",
             "range granularity",
             "primary-first",
@@ -567,10 +567,10 @@
       "moduleId": "mssr-jev-librarian-integration-handoff",
       "segments": [
         {
-          "id": "current-handoff",
+          "id": "historical-handoff",
           "sections": [
             "## Repository snapshot and preservation",
-            "## Current next gates"
+            "## Historical next gates — 2026-10-11"
           ],
           "baseline": true
         },

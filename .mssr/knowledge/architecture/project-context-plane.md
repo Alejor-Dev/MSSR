@@ -19,3 +19,17 @@ Semantic review has no apply authority. Deterministic retrieval proposes bounded
 ## Cross-cutting mutation contracts
 
 A module may declare `requiredWhen: { mutation: true, artifacts?: [...] }`. Matching structured mutation intent makes it required before ranking; read-only work does not. Applicability is repository-declared and budgeted, never inferred from prose and never permission to mutate.
+
+## First-party context proportionality decision
+
+Read-only history/integrity/Git inspection does not imply persistence; close
+alone does not imply maintenance. Preserve explicit persistence actions, backup,
+mutation evidence and required workflow obligations. Publication routing needs
+a persistence action rather than a general status-review match.
+
+Evaluate the assembled core/reference pack, not root length alone. Generic
+review/friction should deliver a compact decision rather than implying proposal
+generation or coordinator-loss experiments. Preserve required phase checkpoints
+and learning gates while testing nearby negative and recovery cases. Context
+cost improvements do not establish causal agent-quality gains; separate fixture
+traces, incomplete outcomes and host/model cohorts when evaluating utility.
