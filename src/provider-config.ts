@@ -35,7 +35,9 @@ export type MssrProviderConfig = z.infer<typeof mssrProviderConfigSchema>;
  * commands, and the resulting providers expose tools/list metadata only.
  */
 export async function loadMssrProviderConfig(configPath: string): Promise<MssrProviderConfig> {
-  const text = await fs.readFile(configPath, "utf8");
+  // Windows editors and file writers may prepend a UTF-8 BOM. JSON.parse does
+  // not accept it, even though the remaining document is valid JSON.
+  const text = (await fs.readFile(configPath, "utf8")).replace(/^\uFEFF/, "");
   return mssrProviderConfigSchema.parse(JSON.parse(text));
 }
 

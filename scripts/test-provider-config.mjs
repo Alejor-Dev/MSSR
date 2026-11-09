@@ -38,6 +38,14 @@ const configPath = path.join(directory, "providers.json");
 try {
   await fs.writeFile(configPath, JSON.stringify(fixture), "utf8");
   assert.deepEqual(await loadMssrProviderConfig(configPath), fixture);
+
+  // Regression: a UTF-8 BOM can be added by Windows tools and must not stop
+  // the MCP server from loading an otherwise valid operator config.
+  await fs.writeFile(configPath, `\uFEFF${JSON.stringify(fixture)}`, "utf8");
+  assert.deepEqual(await loadMssrProviderConfig(configPath), fixture);
+
+  await fs.writeFile(configPath, "{ invalid json", "utf8");
+  await assert.rejects(loadMssrProviderConfig(configPath));
 } finally {
   await fs.rm(directory, { recursive: true, force: true });
 }
